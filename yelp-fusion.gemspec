@@ -6,8 +6,8 @@ require "yelp/fusion/version"
 Gem::Specification.new do |spec|
   spec.name          = "yelp-fusion"
   spec.version       = Yelp::Fusion::VERSION
-  spec.authors       = ["Erik Grueter"]
-  spec.email         = ["erikgrueter@gmail.com"]
+  spec.authors       = ["Erik Grueter", "Lyra Katzman"]
+  spec.email         = ["erikgrueter@gmail.com", "lkatzman@jobcase.com"]
 
   spec.summary       = %q{A Ruby gem for the Yelp Fusion (V3) API and beyond}
   spec.description   = %q{A Ruby gem for the Yelp Fucsion (v3) API. It is built to support future versions}
