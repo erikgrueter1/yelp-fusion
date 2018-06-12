@@ -73,7 +73,7 @@ class ClientTest < Minitest::Test
 
   def test_needs_API_key
     assert_raises Yelp::Fusion::Error::MissingAPIKeys do
-      connection = @client.connection
+      @client.connection
     end
   end
 end
