@@ -7,7 +7,6 @@ class ClientTest < Minitest::Test
   end
 
   def test_create_instance_of_yelp_client
-    Yelp::Fusion::Client.new
     @client
   end
 
@@ -18,31 +17,48 @@ class ClientTest < Minitest::Test
     assert_kind_of Yelp::Fusion::Configuration, client_initialize.configuration
   end
 
-  # need tests for configuration
-  def test_create_instance_of_yelp_client_with_options
-    client = Yelp::Fusion::Client.new(
-      {
-        consumer_key: 'CONSUMER_KEY',
-        consumer_secret: 'CONSUMER_SECRET',
-        token: 'TOKEN',
-        token_secret: 'TOKEN_SECRET'
-      }
-    )
   def test_create_instance_of_yelp_client_with_good_key
     api_key = '12345'
     client_initialize = Yelp::Fusion::Client.new(api_key)
     assert_equal client_initialize.configuration.api_key, api_key
   end
 
-    # check which configuration keys are
-    # actually needed here
-    assert_equal client.consumer_key, 'CONSUMER_KEY'
-    assert_equal client.consumer_secret, 'CONSUMER_SECRET'
-    assert_equal client.token, 'TOKEN'
-    assert_equal client.token_secret, 'TOKEN_SECRET'
+  def test_configure_adds_key
+    api_key = 'abc'
+    config = @client.configure do |c|
+      c.api_key = api_key
+    end
+    assert_equal config.api_key, api_key
   end
 
-  def configure_instance_of_yelp_client
+  def test_does_not_pass_api_key_test
+    api_key = nil
+    assert_raises Yelp::Fusion::Error::MissingAPIKeys do
+      Yelp::Fusion::Client.new.configure do |c|
+        c.api_key = api_key
+      end
+    end
+  end
+
+  def test_with_already_initialized_configuration
+    api_key = 'abcd'
+    client_initialize = Yelp::Fusion::Client.new(api_key)
+    assert_raises Yelp::Fusion::Error::AlreadyConfigured do
+      client_initialize.configure do |c|
+        c.api_key = api_key
+      end
+    end
+  end
+
+  def test_if_configuration_is_frozen
+    api_key = 'abc'
+    config = @client.configure do |c|
+      c.api_key = api_key
+    end
+    assert_raises RuntimeError do
+      config.api_key = '1234'
+    end
+  end
 
   end
 end
