@@ -2,9 +2,20 @@ require 'test_helper'
 require 'pry-coolline'
 
 class ClientTest < Minitest::Test
+  def setup
+    @client = Yelp::Fusion::Client.new
+  end
 
   def test_create_instance_of_yelp_client
     Yelp::Fusion::Client.new
+    @client
+  end
+
+  def test_client_object_type_matches
+    api_key = 'thisIsAnAPITestKey'
+    client_initialize = Yelp::Fusion::Client.new(api_key)
+    assert_kind_of Yelp::Fusion::Client, client_initialize
+    assert_kind_of Yelp::Fusion::Configuration, client_initialize.configuration
   end
 
   # need tests for configuration
@@ -17,6 +28,11 @@ class ClientTest < Minitest::Test
         token_secret: 'TOKEN_SECRET'
       }
     )
+  def test_create_instance_of_yelp_client_with_good_key
+    api_key = '12345'
+    client_initialize = Yelp::Fusion::Client.new(api_key)
+    assert_equal client_initialize.configuration.api_key, api_key
+  end
 
     # check which configuration keys are
     # actually needed here
