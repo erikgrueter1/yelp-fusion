@@ -1,5 +1,7 @@
 require 'yelp/fusion'
 require 'yelp/fusion/client'
-
+require 'yelp/fusion/configuration'
+require 'yelp/fusion/version'
+require 'yelp/fusion/error'
 require 'minitest/autorun'
 require 'minitest/pride'
