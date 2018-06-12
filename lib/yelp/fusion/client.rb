@@ -43,6 +43,17 @@ module Yelp
           @configuration.freeze
         end
       end
+
+      # API connection
+      def connection
+        return @connection if instance_variable_defined?(:@connection)
+
+        check_api_keys
+        @connection = Faraday.new(API_HOST) do |conn|
+          # this guy uses oauth2 and bearer? maybe? to authorize the key
+          conn.request :oauth2, @configuration.api_key, token_type: :bearer
+          # Using default http library
+          conn.adapter :net_http
         end
       end
     end
