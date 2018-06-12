@@ -2,6 +2,7 @@ require 'faraday'
 require 'faraday_middleware'
 require 'test_helper'
 require 'pry-coolline'
+require 'minitest/autorun'
 
 class ClientTest < Minitest::Test
   def setup
