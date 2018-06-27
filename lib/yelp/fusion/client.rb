@@ -2,12 +2,12 @@ require 'faraday'
 require 'faraday_middleware'
 require 'yelp/fusion/configuration'
 require 'yelp/fusion/error'
+require 'yelp/fusion/endpoint/search'
 
 module Yelp
   module Fusion
     class Client
       API_HOST = 'https://api.yelp.com'.freeze
-      API_VERSION_V3 = 'v3'.freeze
 
       attr_accessor :configuration
 
@@ -16,9 +16,8 @@ module Yelp
       # @return [Client] a new client initialized with the keys
       def initialize(option = nil)
         @configuration = nil
-        unless option.nil?
-          @configuration = Configuration.new(option)
-        end
+        return if option.nil?
+        @configuration = Configuration.new(option)
       end
 
       # Creates a configuration with API keys
@@ -33,7 +32,9 @@ module Yelp
       # Checks that all the keys needed were given
       # @return [@configuration] a frozen configuration
       def check_api_keys
-        if @configuration.nil? || @configuration.api_key.nil? || defined?(@configuration.api_key).nil?
+        if @configuration.nil? ||
+           @configuration.api_key.nil? ||
+           defined?(@configuration.api_key).nil?
           @configuration = nil
           raise Error::MissingAPIKeys
         else

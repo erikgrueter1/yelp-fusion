@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/lJAGnYzku5zSaLnQ_T6_GQ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Authorization:
+      - Bearer
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4999'
+      Ratelimit-Resettime:
+      - '2018-06-21T00:00:00+00:00'
+      X-Proxied:
+      - 10-65-132-129-useast1bprod
+      Transfer-Encoding:
+      - chunked
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Wed, 20 Jun 2018 19:04:25 GMT
+      Via:
+      - 1.1 varnish
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-bos8226-BOS
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id": "lJAGnYzku5zSaLnQ_T6_GQ", "alias": "brendas-french-soul-food-san-francisco",
+        "name": "Brenda''s French Soul Food", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/YT8ho02lCT6Ubu3vx8uCaw/o.jpg",
+        "is_claimed": true, "is_closed": false, "url": "https://www.yelp.com/biz/brendas-french-soul-food-san-francisco?adjust_creative=-pz45lFH4aD0aS0s94dStQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_lookup&utm_source=-pz45lFH4aD0aS0s94dStQ",
+        "phone": "+14153458100", "display_phone": "(415) 345-8100", "review_count":
+        9241, "categories": [{"alias": "breakfast_brunch", "title": "Breakfast & Brunch"},
+        {"alias": "french", "title": "French"}, {"alias": "soulfood", "title": "Soul
+        Food"}], "rating": 4.0, "location": {"address1": "652 Polk St", "address2":
+        "Pulled Polk", "address3": "Pulked Pork", "city": "San Francisco", "zip_code": "94102", "country":
+        "US", "state": "CA", "display_address": ["652 Polk St", "San Francisco, CA
+        94102"], "cross_streets": "Turk St & Eddy St"}, "coordinates": {"latitude":
+        37.7829016035273, "longitude": -122.419043442957}, "photos": ["https://s3-media1.fl.yelpcdn.com/bphoto/YT8ho02lCT6Ubu3vx8uCaw/o.jpg",
+        "https://s3-media1.fl.yelpcdn.com/bphoto/xKxc44zPdqU2xjan1PtOlQ/o.jpg", "https://s3-media4.fl.yelpcdn.com/bphoto/dG9IHIWb-CKg_nx_KnLFgQ/o.jpg"],
+        "price": "$$", "hours": [{"open": [{"is_overnight": false, "start": "0800",
+        "end": "1500", "day": 0}, {"is_overnight": false, "start": "0800", "end":
+        "1500", "day": 1}, {"is_overnight": false, "start": "0800", "end": "2200",
+        "day": 2}, {"is_overnight": false, "start": "0800", "end": "2200", "day":
+        3}, {"is_overnight": false, "start": "0800", "end": "2200", "day": 4}, {"is_overnight":
+        false, "start": "0800", "end": "2200", "day": 5}, {"is_overnight": false,
+        "start": "0800", "end": "2000", "day": 6}], "hours_type": "REGULAR", "is_open_now":
+        true}], "transactions": []}'
+    http_version: 
+  recorded_at: Wed, 20 Jun 2018 19:04:25 GMT
+recorded_with: VCR 4.0.0

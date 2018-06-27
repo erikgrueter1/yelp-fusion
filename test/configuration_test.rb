@@ -1,5 +1,5 @@
+require_relative 'test_helper'
 require 'pry-coolline'
-require 'test_helper'
 
 class ConfigurationTest < Minitest::Test
   def test_config_key_is_configuration_type
@@ -9,7 +9,7 @@ class ConfigurationTest < Minitest::Test
   end
 
   def test_create_instance_of_yelp_configuration_with_bad_key
-    sample_api_key = 12345
+    sample_api_key = 12_345
     config = Yelp::Fusion::Configuration.new(sample_api_key)
     assert_nil config.api_key
   end

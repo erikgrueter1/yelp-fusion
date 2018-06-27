@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/matches?address1=168%20Western%20Ave&city=allston&country=US&name=swissbakers&state=MA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Authorization:
+      - Bearer 
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4996'
+      Ratelimit-Resettime:
+      - '2018-06-22T00:00:00+00:00'
+      X-Proxied:
+      - 10-65-132-129-useast1bprod
+      Transfer-Encoding:
+      - chunked
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Thu, 21 Jun 2018 20:49:37 GMT
+      Via:
+      - 1.1 varnish
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-iad2125-IAD
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"businesses": [{"id": "PxFqG5KG4Uzp48KOipAXOg", "alias": "swissb\u00e4kers-allston",
+        "name": "Swissb\u00e4kers", "coordinates": {"latitude": 42.3631904, "longitude":
+        -71.1284677}, "location": {"address1": "168 Western Ave", "address2": "1234",
+        "address3": "5678", "city": "Allston", "zip_code": "02134", "country": "US", "state":
+        "MA", "display_address": ["168 Western Ave", "Allston, MA 02134"]}, "phone":
+        "+16179033113", "display_phone": "(617) 903-3113"}]}'
+    http_version: 
+  recorded_at: Thu, 21 Jun 2018 20:49:37 GMT
+recorded_with: VCR 4.0.0

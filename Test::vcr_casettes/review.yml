@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/lJAGnYzku5zSaLnQ_T6_GQ/reviews
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Authorization:
+      - Bearer 
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4999'
+      Ratelimit-Resettime:
+      - '2018-06-23T00:00:00+00:00'
+      X-Proxied:
+      - 10-65-81-72-useast1aprod
+      Transfer-Encoding:
+      - chunked
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Fri, 22 Jun 2018 15:13:59 GMT
+      Via:
+      - 1.1 varnish
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-iad2144-IAD
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"reviews": [{"id": "LLY9bAET7uw_hLa3q7rB3A", "url": "https://www.yelp.com/biz/brendas-french-soul-food-san-francisco?hrid=LLY9bAET7uw_hLa3q7rB3A&adjust_creative=-pz45lFH4aD0aS0s94dStQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=-pz45lFH4aD0aS0s94dStQ",
+        "text": "Fried chicken is a phenomenon.\nI am super happy I ended up here,
+        in this restaurant, with these excellent team and managers.\nLove the atmosphere
+        and...", "rating": 5, "time_created": "2018-06-21 22:25:51", "user": {"image_url":
+        "https://s3-media2.fl.yelpcdn.com/photo/JlL2dki0oyQmPmakrOYUQg/o.jpg", "name":
+        "Roxana A."}}, {"id": "NckXirtkEwzbGbSCTx1hFg", "url": "https://www.yelp.com/biz/brendas-french-soul-food-san-francisco?hrid=NckXirtkEwzbGbSCTx1hFg&adjust_creative=-pz45lFH4aD0aS0s94dStQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=-pz45lFH4aD0aS0s94dStQ",
+        "text": "This was always my go-to restaurant until today, the last time I
+        will venture there. I brought a newbie with me in hopes to have the amazing
+        service and...", "rating": 2, "time_created": "2018-06-20 02:19:50", "user":
+        {"image_url": "https://s3-media3.fl.yelpcdn.com/photo/chJZtitFb-sAQJPz5Htbyw/o.jpg",
+        "name": "David B."}}, {"id": "Bf28dDv1oNuih-4VAUtmwg", "url": "https://www.yelp.com/biz/brendas-french-soul-food-san-francisco?hrid=Bf28dDv1oNuih-4VAUtmwg&adjust_creative=-pz45lFH4aD0aS0s94dStQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_reviews&utm_source=-pz45lFH4aD0aS0s94dStQ",
+        "text": "Last Monday, we had Brenda''s catering service provide food for our
+        office event. Here is what we found that may help you.\n\nThey failed to deliver
+        all items...", "rating": 3, "time_created": "2018-06-19 20:46:33", "user":
+        {"image_url": "https://s3-media3.fl.yelpcdn.com/photo/FMGTTdWVv1_m50wvORoNpQ/o.jpg",
+        "name": "Katy F."}}], "total": 9247, "possible_languages": ["fr", "en", "zh",
+        "de", "sv", "da", "es"]}'
+    http_version: 
+  recorded_at: Fri, 22 Jun 2018 15:14:01 GMT
+recorded_with: VCR 4.0.0
