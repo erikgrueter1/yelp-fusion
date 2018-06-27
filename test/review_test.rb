@@ -4,7 +4,7 @@ require 'vcr'
 
 class ReviewTest < Minitest::Test
   def setup
-    api_key = 'api_placholder'
+    api_key = 'api_placeholder'
     @client = Yelp::Fusion::Client.new(api_key)
     @review = Yelp::Fusion::Endpoint::Review.new(@client)
     @results = VCR.use_cassette('review') do
@@ -27,8 +27,7 @@ class ReviewTest < Minitest::Test
   end
 
   def test_review_is_initializing
-    id = 'lJAGnYzku5zSaLnQ_T6_GQ'
-    review_endpoint = Yelp::Fusion::Endpoint::Review.new(id)
+    review_endpoint = Yelp::Fusion::Endpoint::Review.new('id')
     assert_kind_of Yelp::Fusion::Endpoint::Review, review_endpoint
   end
 

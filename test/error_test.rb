@@ -108,8 +108,7 @@ class ErrorTest < Minitest::Test
   end
 
   def test_missing_lat_lang_failure
-    api_key = 'abc'
-    client = Yelp::Fusion::Client.new(api_key)
+    client = Yelp::Fusion::Client.new('api_key')
     assert_raises Yelp::Fusion::Error::MissingLatLng do
       endpoint = Yelp::Fusion::Endpoint
       endpoint::Search.new(client).search_by_coordinates({}, {})
@@ -117,9 +116,8 @@ class ErrorTest < Minitest::Test
   end
 
   def test_missing_lang_failure
-    api_key = 'abc'
     lat_lang = { latitude: 37.786 }
-    client = Yelp::Fusion::Client.new(api_key)
+    client = Yelp::Fusion::Client.new('api_key')
     assert_raises Yelp::Fusion::Error::MissingLatLng do
       endpoint = Yelp::Fusion::Endpoint
       endpoint::Search.new(client).search_by_coordinates(lat_lang, {})
@@ -127,9 +125,8 @@ class ErrorTest < Minitest::Test
   end
 
   def test_missing_lat_failure
-    api_key = 'abc'
     lat_lang = { longitude: 37.786 }
-    client = Yelp::Fusion::Client.new(api_key)
+    client = Yelp::Fusion::Client.new('api_key')
     assert_raises Yelp::Fusion::Error::MissingLatLng do
       endpoint = Yelp::Fusion::Endpoint
       endpoint::Search.new(client).search_by_coordinates(lat_lang, {})

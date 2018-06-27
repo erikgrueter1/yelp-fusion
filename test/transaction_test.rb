@@ -4,7 +4,7 @@ require 'vcr'
 
 class TransactionTest < Minitest::Test
   def setup
-    api_key = 'sample_api_key'
+    api_key = 'api_placeholder'
     delivery = 'delivery'
     location = { location: 'San Francisco' }
     @client = Yelp::Fusion::Client.new(api_key)

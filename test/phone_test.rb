@@ -4,7 +4,7 @@ require 'vcr'
 
 class PhoneTest < Minitest::Test
   def setup
-    api_key = 'sample_api_key'
+    api_key = 'api_placeholder'
     phone = '+14159083801'
     @client = Yelp::Fusion::Client.new(api_key)
     @phone = Yelp::Fusion::Endpoint::Phone.new(@client)

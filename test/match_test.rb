@@ -30,8 +30,7 @@ class MatchTest < Minitest::Test
   end
 
   def test_match_is_initializing
-    id = 'lJAGnYzku5zSaLnQ_T6_GQ'
-    match_endpoint = Yelp::Fusion::Endpoint::Match.new(id)
+    match_endpoint = Yelp::Fusion::Endpoint::Match.new('id')
     assert_kind_of Yelp::Fusion::Endpoint::Match, match_endpoint
   end
 
