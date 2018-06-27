@@ -1,3 +1,6 @@
+require 'simplecov'
+SimpleCov.start
+
 require 'yelp/fusion'
 require 'yelp/fusion/client'
 require 'yelp/fusion/configuration'
@@ -28,7 +31,11 @@ require 'yelp/fusion/endpoint/review'
 require 'minitest/autorun'
 require 'minitest/pride'
 require 'vcr'
+require 'rubocop'
 require 'json'
+
+$VERBOSE = nil
+
 VCR.configure do |config|
   config.cassette_library_dir = 'Test::vcr_casettes'
   config.hook_into :webmock
