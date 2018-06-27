@@ -27,7 +27,7 @@ class SearchTest < Minitest::Test
   end
 
   def test_search_is_initializing
-    json = {"a": 10, "b": 20}
+    json = { 'a' => 10, 'b' => 20 }
     search_endpoint = Yelp::Fusion::Endpoint::Search.new(json)
     assert_kind_of Yelp::Fusion::Endpoint::Search, search_endpoint
   end
@@ -41,10 +41,10 @@ class SearchTest < Minitest::Test
   end
 
   def test_search_by_coordinates_returns_search_object
-    coordinates = {latitude: 37.6, longitude: 38.6}
+    coordinates = { latitude: 37.6, longitude: 38.6 }
     coord_results = VCR.use_cassette('search_by_coordinates') do
       @search.search_by_coordinates(coordinates)
-    end 
+    end
     assert_kind_of Yelp::Fusion::Responses::Search, coord_results
   end
 

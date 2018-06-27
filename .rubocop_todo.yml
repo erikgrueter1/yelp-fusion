@@ -123,7 +123,7 @@ Lint/UselessAssignment:
 
 # Offense count: 6
 Metrics/AbcSize:
-  Max: 30
+  Max: 15
 
 # Offense count: 1
 # Configuration parameters: CountComments, ExcludedMethods.
@@ -164,7 +164,7 @@ Style/ClassVars:
 
 # Offense count: 21
 Style/Documentation:
-  Enabled: false
+  Enabled: 
 
 # Offense count: 1
 # Cop supports --auto-correct.

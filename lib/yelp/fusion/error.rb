@@ -29,7 +29,7 @@ module Yelp
 
         # Maps from API Error id's to Yelp::Error exception classes.
         def error_classes
-          @@error_classes ||= Hash.new do |hash, key|
+          @error_classes ||= Hash.new do |hash, key|
             class_name = key.split('_').map(&:capitalize).join('')
             hash[key] = Yelp::Fusion::Error.const_get(class_name)
           end

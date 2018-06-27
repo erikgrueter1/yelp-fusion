@@ -23,7 +23,7 @@ class TransactionTest < Minitest::Test
   end
 
   def instance_mapping(variable_set)
-    instance_vars = variable_set.instance_variables.map do |attribute|
+    variable_set.instance_variables.map do |attribute|
       { attribute => variable_set.instance_variable_get(attribute) }
     end
   end

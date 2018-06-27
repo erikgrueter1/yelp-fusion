@@ -30,13 +30,14 @@ module Yelp
 
         # Search by coordinates: give it a latitude and longitude along with
         # option accuracy, altitude, and altitude_accuracy to search an area.
-        # More info at: https://www.yelp.com/developers/documentation/v3/transaction_search
+        # More info at
+        # https://www.yelp.com/developers/documentation/v3/transaction_search
         #
         # @param coordinates [Hash] a hash of latitude and longitude.
         # @param params [Hash] a hash that corresponds to params on the API:
         #   https://www.yelp.com/developers/documentation/v3/transaction_search
-        # @return [Response::Search] a parsed object of the response. For a complete
-        #   list of possible response values visit:
+        # @return [Response::Search] a parsed object of the response.
+        #   For a complete list of possible response values visit:
         #   https://www.yelp.com/developers/documentation/v3/transaction_search
         #
         # @example Search for business with params

@@ -16,8 +16,8 @@ module Yelp
         # Make a request to the business endpoint on the API
         #
         # @param phone [String] the phone number
-        # @return [Response::Phone] a parsed object of the response. For a complete
-        #   sample response visit:
+        # @return [Response::Phone] a parsed object of the response.
+        #   For a complete sample response visit:
         #   https://www.yelp.com/developers/documentation/v3/business_search_phone
         #
         # @example Search for business with params and locale

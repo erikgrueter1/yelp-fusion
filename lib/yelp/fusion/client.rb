@@ -16,9 +16,8 @@ module Yelp
       # @return [Client] a new client initialized with the keys
       def initialize(option = nil)
         @configuration = nil
-        unless option.nil?
-          @configuration = Configuration.new(option)
-        end
+        return if option.nil?
+        @configuration = Configuration.new(option)
       end
 
       # Creates a configuration with API keys

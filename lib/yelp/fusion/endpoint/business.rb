@@ -33,7 +33,7 @@ module Yelp
         # The endpoint requires a format of /v3/business/{business-id}
         # so the primary request parameter is concatenated. After getting
         # the response back it's checked to see if there are any API errors
-        # and raises the relevant one if there is.
+        # and raises the relevant one if there is
         #
         # @param id [String, Integer] the business id
         # @param locale [Hash] a hash of supported locale-related parameters
