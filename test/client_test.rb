@@ -1,8 +1,7 @@
+require_relative 'test_helper'
 require 'faraday'
 require 'faraday_middleware'
-require 'test_helper'
 require 'pry-coolline'
-require 'minitest/autorun'
 
 class ClientTest < Minitest::Test
   def setup
@@ -71,7 +70,7 @@ class ClientTest < Minitest::Test
     assert_equal connection_one, connection_two
   end
 
-  def test_needs_API_key
+  def test_needs_api_key
     assert_raises Yelp::Fusion::Error::MissingAPIKeys do
       @client.connection
     end
