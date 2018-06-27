@@ -1,0 +1,254 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/transactions/delivery/search?location=San%20Francisco
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Authorization:
+      - Bearer
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4994'
+      Ratelimit-Resettime:
+      - '2018-06-27T00:00:00+00:00'
+      X-Proxied:
+      - 10-65-81-72-useast1aprod
+      Transfer-Encoding:
+      - chunked
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Tue, 26 Jun 2018 19:32:51 GMT
+      Via:
+      - 1.1 varnish
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-bos8225-BOS
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"businesses": [{"id": "DAiqwrmv19Uv-I1bOoAJCQ", "alias": "baiano-pizzeria-san-francisco-3",
+        "name": "Baiano Pizzeria", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/1UBizBJVlcfGcicFRNj3hw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/baiano-pizzeria-san-francisco-3?adjust_creative=-pz45lFH4aD0aS0s94dStQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_transactions_search_delivery&utm_source=-pz45lFH4aD0aS0s94dStQ",
+        "review_count": 150, "categories": [{"alias": "pizza", "title": "Pizza"},
+        {"alias": "salad", "title": "Salad"}], "rating": 4.0, "coordinates": {"latitude":
+        37.7741681941565, "longitude": -122.422267710877}, "transactions": ["pickup",
+        "delivery"], "price": "$", "location": {"address1": "100 Gough St", "address2":
+        "1234", "address3": "1234", "city": "San Francisco", "zip_code": "94102", "country":
+        "US", "state": "CA", "display_address": ["100 Gough St", "San Francisco, CA
+        94102"]}, "phone": "+14156211401", "display_phone": "(415) 621-1401"}, {"id":
+        "QWZO1RdLbG5h0RGDiItoAA", "alias": "zaoh-restaurant-san-francisco", "name":
+        "Zaoh Restaurant", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/M9ZRVjDuFqUz7dHjJVhGEg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/zaoh-restaurant-san-francisco?adjust_creative=-pz45lFH4aD0aS0s94dStQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_transactions_search_delivery&utm_source=-pz45lFH4aD0aS0s94dStQ",
+        "review_count": 240, "categories": [{"alias": "sushi", "title": "Sushi Bars"},
+        {"alias": "japanese", "title": "Japanese"}], "rating": 3.5, "coordinates":
+        {"latitude": 37.77317, "longitude": -122.41787}, "transactions": ["pickup",
+        "delivery"], "price": "$$", "location": {"address1": "1555 Mission St", "address2":
+        "", "address3": "", "city": "San Francisco", "zip_code": "94103", "country":
+        "US", "state": "CA", "display_address": ["1555 Mission St", "San Francisco,
+        CA 94103"]}, "phone": "+14154313930", "display_phone": "(415) 431-3930"},
+        {"id": "qqUqgHS2K20ePDQ-nJzM7w", "alias": "v-cafe-san-francisco", "name":
+        "V Cafe", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/wDho3GPN_IK5oUhoZIExgA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/v-cafe-san-francisco?adjust_creative=-pz45lFH4aD0aS0s94dStQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_transactions_search_delivery&utm_source=-pz45lFH4aD0aS0s94dStQ",
+        "review_count": 242, "categories": [{"alias": "cheesesteaks", "title": "Cheesesteaks"},
+        {"alias": "burgers", "title": "Burgers"}], "rating": 4.0, "coordinates": {"latitude":
+        37.77143, "longitude": -122.41428}, "transactions": ["pickup", "delivery"],
+        "price": "$", "location": {"address1": "1525 Folsom St", "address2": "", "address3":
+        "", "city": "San Francisco", "zip_code": "94103", "country": "US", "state":
+        "CA", "display_address": ["1525 Folsom St", "San Francisco, CA 94103"]}, "phone":
+        "+14158633620", "display_phone": "(415) 863-3620"}, {"id": "nik97G8-H0rFoJKO4X3ZIA",
+        "alias": "7-mission-restaurant-san-francisco-2", "name": "7 Mission Restaurant",
+        "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/THSMpCqmMoYZOoOpcR6yBA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/7-mission-restaurant-san-francisco-2?adjust_creative=-pz45lFH4aD0aS0s94dStQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_transactions_search_delivery&utm_source=-pz45lFH4aD0aS0s94dStQ",
+        "review_count": 216, "categories": [{"alias": "vietnamese", "title": "Vietnamese"},
+        {"alias": "chinese", "title": "Chinese"}], "rating": 3.5, "coordinates": {"latitude":
+        37.7783966064453, "longitude": -122.410293579102}, "transactions": ["pickup",
+        "delivery"], "price": "$", "location": {"address1": "150 7th St", "address2":
+        null, "address3": "", "city": "San Francisco", "zip_code": "94103", "country":
+        "US", "state": "CA", "display_address": ["150 7th St", "San Francisco, CA
+        94103"]}, "phone": "+14158613298", "display_phone": "(415) 861-3298"}, {"id":
+        "KRO4PzfmbRgCu1Ayt1LE1g", "alias": "mortys-delicatessen-san-francisco", "name":
+        "Morty''s Delicatessen", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/NW5NwtCk404qF-UJd-OlVg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/mortys-delicatessen-san-francisco?adjust_creative=-pz45lFH4aD0aS0s94dStQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_transactions_search_delivery&utm_source=-pz45lFH4aD0aS0s94dStQ",
+        "review_count": 492, "categories": [{"alias": "sandwiches", "title": "Sandwiches"},
+        {"alias": "delis", "title": "Delis"}, {"alias": "vegetarian", "title": "Vegetarian"}],
+        "rating": 4.0, "coordinates": {"latitude": 37.78188, "longitude": -122.41522},
+        "transactions": ["pickup", "delivery"], "price": "$", "location": {"address1":
+        "280 Golden Gate Ave", "address2": null, "address3": "", "city": "San Francisco",
+        "zip_code": "94102", "country": "US", "state": "CA", "display_address": ["280
+        Golden Gate Ave", "San Francisco, CA 94102"]}, "phone": "+14155673354", "display_phone":
+        "(415) 567-3354"}, {"id": "Y2tRPJxl0nvRJ3BsZUzAkQ", "alias": "pizza-zone-n-grill-san-francisco-3",
+        "name": "Pizza Zone N Grill", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/1EKSaFlzZIj9hTW3ceU7uw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/pizza-zone-n-grill-san-francisco-3?adjust_creative=-pz45lFH4aD0aS0s94dStQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_transactions_search_delivery&utm_source=-pz45lFH4aD0aS0s94dStQ",
+        "review_count": 286, "categories": [{"alias": "pizza", "title": "Pizza"},
+        {"alias": "burgers", "title": "Burgers"}, {"alias": "sandwiches", "title":
+        "Sandwiches"}], "rating": 3.0, "coordinates": {"latitude": 37.7702881, "longitude":
+        -122.4225688}, "transactions": ["pickup", "delivery"], "price": "$", "location":
+        {"address1": "178 Valencia St", "address2": "", "address3": "", "city": "San
+        Francisco", "zip_code": "94103", "country": "US", "state": "CA", "display_address":
+        ["178 Valencia St", "San Francisco, CA 94103"]}, "phone": "+14157017300",
+        "display_phone": "(415) 701-7300"}, {"id": "ZajCfjeJaHdakadUMYT9Dw", "alias":
+        "golden-kim-tar-san-francisco", "name": "Golden Kim Tar", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/ZWSMmOGQQnCg9Jnrhee_Yw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/golden-kim-tar-san-francisco?adjust_creative=-pz45lFH4aD0aS0s94dStQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_transactions_search_delivery&utm_source=-pz45lFH4aD0aS0s94dStQ",
+        "review_count": 257, "categories": [{"alias": "chinese", "title": "Chinese"}],
+        "rating": 3.5, "coordinates": {"latitude": 37.7818482, "longitude": -122.4170559},
+        "transactions": ["pickup", "delivery"], "price": "$", "location": {"address1":
+        "434 Larkin St", "address2": null, "address3": "", "city": "San Francisco",
+        "zip_code": "94102", "country": "US", "state": "CA", "display_address": ["434
+        Larkin St", "San Francisco, CA 94102"]}, "phone": "+14153468889", "display_phone":
+        "(415) 346-8889"}, {"id": "xSWJlaiXDSMHyNpOAIYJqg", "alias": "metro-caffe-san-francisco",
+        "name": "Metro Caffe", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/F9f5N4wc61YFK1rhF5_nhA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/metro-caffe-san-francisco?adjust_creative=-pz45lFH4aD0aS0s94dStQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_transactions_search_delivery&utm_source=-pz45lFH4aD0aS0s94dStQ",
+        "review_count": 275, "categories": [{"alias": "burgers", "title": "Burgers"},
+        {"alias": "cheesesteaks", "title": "Cheesesteaks"}, {"alias": "hotdog", "title":
+        "Hot Dogs"}], "rating": 4.0, "coordinates": {"latitude": 37.7718234819883,
+        "longitude": -122.430553196817}, "transactions": ["pickup", "delivery"], "price":
+        "$", "location": {"address1": "247 Fillmore St", "address2": "", "address3":
+        "", "city": "San Francisco", "zip_code": "94117", "country": "US", "state":
+        "CA", "display_address": ["247 Fillmore St", "San Francisco, CA 94117"]},
+        "phone": "+14156219536", "display_phone": "(415) 621-9536"}, {"id": "ZD5-5Gu44WrcsYtw7qMgiw",
+        "alias": "palmyra-san-francisco", "name": "Palmyra", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/Hj2TsvNEprFYhXV6Qu3kwg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/palmyra-san-francisco?adjust_creative=-pz45lFH4aD0aS0s94dStQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_transactions_search_delivery&utm_source=-pz45lFH4aD0aS0s94dStQ",
+        "review_count": 778, "categories": [{"alias": "mediterranean", "title": "Mediterranean"},
+        {"alias": "mideastern", "title": "Middle Eastern"}, {"alias": "syrian", "title":
+        "Syrian"}], "rating": 4.0, "coordinates": {"latitude": 37.771851, "longitude":
+        -122.433937}, "transactions": ["pickup", "delivery"], "price": "$", "location":
+        {"address1": "700 Haight St", "address2": "", "address3": "", "city": "San
+        Francisco", "zip_code": "94117", "country": "US", "state": "CA", "display_address":
+        ["700 Haight St", "San Francisco, CA 94117"]}, "phone": "+14158964172", "display_phone":
+        "(415) 896-4172"}, {"id": "M5xcWgfoGtvYUaYysujWdA", "alias": "cheers-on-demand-san-francisco-5",
+        "name": "Cheers On Demand", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/jZG2XNS1iXmvsQoTsLPh6g/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/cheers-on-demand-san-francisco-5?adjust_creative=-pz45lFH4aD0aS0s94dStQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_transactions_search_delivery&utm_source=-pz45lFH4aD0aS0s94dStQ",
+        "review_count": 47, "categories": [{"alias": "beer_and_wine", "title": "Beer,
+        Wine & Spirits"}], "rating": 4.5, "coordinates": {"latitude": 37.7773321823714,
+        "longitude": -122.431544454087}, "transactions": ["pickup", "delivery"], "price":
+        "$", "location": {"address1": "867 Fillmore St", "address2": "", "address3":
+        "", "city": "San Francisco", "zip_code": "94117", "country": "US", "state":
+        "CA", "display_address": ["867 Fillmore St", "San Francisco, CA 94117"]},
+        "phone": "+14158852898", "display_phone": "(415) 885-2898"}, {"id": "9jW6WTeK3BrXuZKvHyqrsA",
+        "alias": "newa-san-francisco-4", "name": "Newa", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/T_MZJw-0jLRMz_rheHJhMA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/newa-san-francisco-4?adjust_creative=-pz45lFH4aD0aS0s94dStQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_transactions_search_delivery&utm_source=-pz45lFH4aD0aS0s94dStQ",
+        "review_count": 146, "categories": [{"alias": "indpak", "title": "Indian"},
+        {"alias": "himalayan", "title": "Himalayan/Nepalese"}, {"alias": "halal",
+        "title": "Halal"}], "rating": 4.0, "coordinates": {"latitude": 37.7847215,
+        "longitude": -122.4130263}, "transactions": ["pickup", "delivery"], "price":
+        "$$", "location": {"address1": "407 Ellis St", "address2": "", "address3":
+        null, "city": "San Francisco", "zip_code": "94102", "country": "US", "state":
+        "CA", "display_address": ["407 Ellis St", "San Francisco, CA 94102"]}, "phone":
+        "+14154473876", "display_phone": "(415) 447-3876"}, {"id": "0w6dNMrpBQFLxhVYqx_J5Q",
+        "alias": "red-jade-san-francisco", "name": "Red Jade", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/-C_mhBn9TdpiCjYNWKfMwg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/red-jade-san-francisco?adjust_creative=-pz45lFH4aD0aS0s94dStQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_transactions_search_delivery&utm_source=-pz45lFH4aD0aS0s94dStQ",
+        "review_count": 688, "categories": [{"alias": "chinese", "title": "Chinese"}],
+        "rating": 3.5, "coordinates": {"latitude": 37.7668495178223, "longitude":
+        -122.428527832031}, "transactions": ["pickup", "delivery"], "price": "$",
+        "location": {"address1": "245 Church St", "address2": null, "address3": "",
+        "city": "San Francisco", "zip_code": "94114", "country": "US", "state": "CA",
+        "display_address": ["245 Church St", "San Francisco, CA 94114"]}, "phone":
+        "+14156213020", "display_phone": "(415) 621-3020"}, {"id": "nL40RmgMcFjyAX-QwJ8klw",
+        "alias": "l-acajou-bakery-and-cafe-san-francisco-2", "name": "L''acajou Bakery
+        & Cafe", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/1jcM9_blr9sUzMqdbRitPw/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/l-acajou-bakery-and-cafe-san-francisco-2?adjust_creative=-pz45lFH4aD0aS0s94dStQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_transactions_search_delivery&utm_source=-pz45lFH4aD0aS0s94dStQ",
+        "review_count": 316, "categories": [{"alias": "coffee", "title": "Coffee &
+        Tea"}, {"alias": "bakeries", "title": "Bakeries"}, {"alias": "sandwiches",
+        "title": "Sandwiches"}], "rating": 4.0, "coordinates": {"latitude": 37.7713164,
+        "longitude": -122.4087526}, "transactions": ["pickup", "delivery"], "price":
+        "$", "location": {"address1": "498 9th St", "address2": "", "address3": "",
+        "city": "San Francisco", "zip_code": "94103", "country": "US", "state": "CA",
+        "display_address": ["498 9th St", "San Francisco, CA 94103"]}, "phone": "+14156263683",
+        "display_phone": "(415) 626-3683"}, {"id": "WLqqZYTeo6wFXuCFtlweqA", "alias":
+        "patxis-pizza-san-francisco-2", "name": "Patxi''s Pizza", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/EOEfNgRIFDiLv-UHnWK_eQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/patxis-pizza-san-francisco-2?adjust_creative=-pz45lFH4aD0aS0s94dStQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_transactions_search_delivery&utm_source=-pz45lFH4aD0aS0s94dStQ",
+        "review_count": 2081, "categories": [{"alias": "pizza", "title": "Pizza"},
+        {"alias": "salad", "title": "Salad"}, {"alias": "italian", "title": "Italian"}],
+        "rating": 3.5, "coordinates": {"latitude": 37.77649, "longitude": -122.425},
+        "transactions": ["pickup", "delivery"], "price": "$$", "location": {"address1":
+        "511 Hayes St", "address2": "", "address3": "", "city": "San Francisco", "zip_code":
+        "94102", "country": "US", "state": "CA", "display_address": ["511 Hayes St",
+        "San Francisco, CA 94102"]}, "phone": "+14155589991", "display_phone": "(415)
+        558-9991"}, {"id": "N-vfl3FXnj4M7N6jW-1EGA", "alias": "frena-san-francisco-3",
+        "name": "Frena", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/aVjHuyHA3kjg26msJHb_xA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/frena-san-francisco-3?adjust_creative=-pz45lFH4aD0aS0s94dStQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_transactions_search_delivery&utm_source=-pz45lFH4aD0aS0s94dStQ",
+        "review_count": 249, "categories": [{"alias": "bakeries", "title": "Bakeries"},
+        {"alias": "kosher", "title": "Kosher"}, {"alias": "mediterranean", "title":
+        "Mediterranean"}], "rating": 4.5, "coordinates": {"latitude": 37.780321, "longitude":
+        -122.408274}, "transactions": ["pickup", "delivery"], "price": "$", "location":
+        {"address1": "132 6th St", "address2": null, "address3": "", "city": "San
+        Francisco", "zip_code": "94103", "country": "US", "state": "CA", "display_address":
+        ["132 6th St", "San Francisco, CA 94103"]}, "phone": "+16284443666", "display_phone":
+        "(628) 444-3666"}, {"id": "Z9U5KiRooSqSN4Dggoycww", "alias": "dirty-water-san-francisco-4",
+        "name": "Dirty Water", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/t1Q4pA9F6oNW98LdEeJBww/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/dirty-water-san-francisco-4?adjust_creative=-pz45lFH4aD0aS0s94dStQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_transactions_search_delivery&utm_source=-pz45lFH4aD0aS0s94dStQ",
+        "review_count": 336, "categories": [{"alias": "wine_bars", "title": "Wine
+        Bars"}, {"alias": "cocktailbars", "title": "Cocktail Bars"}, {"alias": "newamerican",
+        "title": "American (New)"}], "rating": 3.5, "coordinates": {"latitude": 37.77674,
+        "longitude": -122.41636}, "transactions": ["restaurant_reservation", "pickup",
+        "delivery"], "price": "$$", "location": {"address1": "1355 Market St", "address2":
+        null, "address3": "", "city": "San Francisco", "zip_code": "94103", "country":
+        "US", "state": "CA", "display_address": ["1355 Market St", "San Francisco,
+        CA 94103"]}, "phone": "+14157925101", "display_phone": "(415) 792-5101"},
+        {"id": "d2upo6I2R4bbMF35tyBKFA", "alias": "split-pea-seduction-san-francisco",
+        "name": "Split Pea Seduction", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/JRANSrIq0RoFVIA-yq4SHQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/split-pea-seduction-san-francisco?adjust_creative=-pz45lFH4aD0aS0s94dStQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_transactions_search_delivery&utm_source=-pz45lFH4aD0aS0s94dStQ",
+        "review_count": 277, "categories": [{"alias": "sandwiches", "title": "Sandwiches"},
+        {"alias": "soup", "title": "Soup"}, {"alias": "salad", "title": "Salad"}],
+        "rating": 4.0, "coordinates": {"latitude": 37.7803635, "longitude": -122.4081286},
+        "transactions": ["pickup", "delivery"], "price": "$$", "location": {"address1":
+        "138 6th St", "address2": "", "address3": "", "city": "San Francisco", "zip_code":
+        "94103", "country": "US", "state": "CA", "display_address": ["138 6th St",
+        "San Francisco, CA 94103"]}, "phone": "+14155512223", "display_phone": "(415)
+        551-2223"}, {"id": "IF6C4SvyWWx1li9S2xt_CQ", "alias": "piccolo-pizza-san-francisco-15",
+        "name": "Piccolo Pizza", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/wP-nl-Vew8dqYhwLPYDapg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/piccolo-pizza-san-francisco-15?adjust_creative=-pz45lFH4aD0aS0s94dStQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_transactions_search_delivery&utm_source=-pz45lFH4aD0aS0s94dStQ",
+        "review_count": 243, "categories": [{"alias": "italian", "title": "Italian"},
+        {"alias": "pizza", "title": "Pizza"}], "rating": 3.5, "coordinates": {"latitude":
+        37.7850558, "longitude": -122.4177129}, "transactions": ["pickup", "delivery"],
+        "price": "$", "location": {"address1": "799 O''Farrell St", "address2": null,
+        "address3": "", "city": "San Francisco", "zip_code": "94109", "country": "US",
+        "state": "CA", "display_address": ["799 O''Farrell St", "San Francisco, CA
+        94109"]}, "phone": "+14154093300", "display_phone": "(415) 409-3300"}, {"id":
+        "bucF7GBwlIUJbPFdoLhxNA", "alias": "supreme-pizza-san-francisco", "name":
+        "Supreme Pizza", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/JdRfGFHKmd7RQ0FdsQNLSg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/supreme-pizza-san-francisco?adjust_creative=-pz45lFH4aD0aS0s94dStQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_transactions_search_delivery&utm_source=-pz45lFH4aD0aS0s94dStQ",
+        "review_count": 109, "categories": [{"alias": "pizza", "title": "Pizza"},
+        {"alias": "italian", "title": "Italian"}], "rating": 3.5, "coordinates": {"latitude":
+        37.7619213, "longitude": -122.4182987}, "transactions": ["pickup", "delivery"],
+        "price": "$", "location": {"address1": "3348 18th St", "address2": "", "address3":
+        "", "city": "San Francisco", "zip_code": "94110", "country": "US", "state":
+        "CA", "display_address": ["3348 18th St", "San Francisco, CA 94110"]}, "phone":
+        "+14154379400", "display_phone": "(415) 437-9400"}, {"id": "vKBW6SWFrIYXW1kIOFY_Ng",
+        "alias": "house-of-thai-san-francisco-2", "name": "House of Thai", "image_url":
+        "https://s3-media2.fl.yelpcdn.com/bphoto/A4Hpgax63Z3-mtrmU1U4XA/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/house-of-thai-san-francisco-2?adjust_creative=-pz45lFH4aD0aS0s94dStQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_transactions_search_delivery&utm_source=-pz45lFH4aD0aS0s94dStQ",
+        "review_count": 1191, "categories": [{"alias": "thai", "title": "Thai"}],
+        "rating": 4.0, "coordinates": {"latitude": 37.7862824, "longitude": -122.4183383},
+        "transactions": ["pickup", "delivery"], "price": "$$", "location": {"address1":
+        "901 Larkin St", "address2": "", "address3": "", "city": "San Francisco",
+        "zip_code": "94109", "country": "US", "state": "CA", "display_address": ["901
+        Larkin St", "San Francisco, CA 94109"]}, "phone": "+14154412248", "display_phone":
+        "(415) 441-2248"}], "total": 127}'
+    http_version: 
+  recorded_at: Tue, 26 Jun 2018 19:32:51 GMT
+recorded_with: VCR 4.0.0
