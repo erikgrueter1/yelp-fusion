@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/search/phone?phone=%2B14159083801
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Authorization:
+      - Bearer 
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json
+      Ratelimit-Dailylimit:
+      - '5000'
+      Ratelimit-Remaining:
+      - '4999'
+      Ratelimit-Resettime:
+      - '2018-06-27T00:00:00+00:00'
+      X-Proxied:
+      - 10-65-188-246-useast1bprod
+      Transfer-Encoding:
+      - chunked
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Tue, 26 Jun 2018 15:33:23 GMT
+      Via:
+      - 1.1 varnish
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-iad2138-IAD
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"businesses": [{"id": "4kMBvIEWPxWkWKFN__8SxQ", "alias": "yelp-san-francisco",
+        "name": "Yelp", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/nQK-6_vZMt5n88zsAS94ew/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/yelp-san-francisco?adjust_creative=-pz45lFH4aD0aS0s94dStQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_phone_search&utm_source=-pz45lFH4aD0aS0s94dStQ",
+        "review_count": 8353, "categories": [{"alias": "massmedia", "title": "Mass
+        Media"}], "rating": 2.0, "coordinates": {"latitude": 37.7867703362929, "longitude":
+        -122.399958372115}, "transactions": [], "location": {"address1": "140 New
+        Montgomery St", "address2": "1234", "address3": "5678", "city": "San Francisco", "zip_code":
+        "94105", "country": "US", "state": "CA", "display_address": ["140 New Montgomery
+        St", "San Francisco, CA 94105"]}, "phone": "+14159083801", "display_phone":
+        "(415) 908-3801"}], "total": 1}'
+    http_version: 
+  recorded_at: Tue, 26 Jun 2018 15:33:23 GMT
+recorded_with: VCR 4.0.0
