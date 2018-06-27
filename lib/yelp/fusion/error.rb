@@ -36,6 +36,9 @@ module Yelp
         end
       end
 
+      # Check the response for errors, raising an appropriate exception if
+      # necessary
+      # @param (see ResponseValidator#validate)
       def self.check_for_error(response)
         @response_validator ||= ResponseValidator.new
         @response_validator.validate(response)
