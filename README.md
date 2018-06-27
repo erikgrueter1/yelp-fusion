@@ -52,7 +52,7 @@ After creating the client you're able to make requests to either the Search, Bus
 
 Once you have a client you can use ``#search`` to make a request to the Search API.
 
-```
+```ruby
 client.search('San Francisco')
 ```
 
