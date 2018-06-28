@@ -107,7 +107,7 @@ client.review('lJAGnYzku5zSaLnQ_T6_GQ')
 To find all of the reviews for a business, use ``#transaction`` with ``'deliver'`` and a business ID. 
 
 ```ruby
-client.transaction_search({'delivery'}, {location: 'San Francisco'})
+client.transaction_search('delivery', {location: 'San Francisco'})
 ```
 
 ### [Match Details API](https://www.yelp.com/developers/documentation/v3/business_match)
@@ -115,7 +115,7 @@ client.transaction_search({'delivery'}, {location: 'San Francisco'})
 To find all of the reviews for a business, use ``#match`` with a business ID. 
 
 ```ruby
-client.transaction_search({name: 'swissbakers', address1: '168 Western Ave', city: 'allston', state: 'MA', country: 'US'})
+client.match({name: 'swissbakers', address1: '168 Western Ave', city: 'allston', state: 'MA', country: 'US'})
 ```
 
 ## Responses
@@ -170,7 +170,8 @@ You can generate and find your Access Tokens at [https://www.yelp.com/developers
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT), Copyright (c) 2018 Jobcase, Inc
+
 
 ## Code of Conduct
 
