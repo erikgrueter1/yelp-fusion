@@ -2,6 +2,8 @@
 
 This is a Ruby Gem for the Yelp API. It'll simplify the process of consuming data from the Yelp API for developers using Ruby. The library encompasses both Search and Business API functions.
 
+This library is in Beta and should be used for testing purposes only.
+
 Please remember to read and follow the [Terms of Use](https://www.yelp.com/developers/api_terms) and [display requirements](https://www.yelp.com/developers/display_requirements)before creating your applications.
 
 
@@ -107,7 +109,7 @@ client.review('lJAGnYzku5zSaLnQ_T6_GQ')
 To find all of the reviews for a business, use ``#transaction`` with ``'deliver'`` and a business ID. 
 
 ```ruby
-client.transaction_search({'delivery'}, {location: 'San Francisco'})
+client.transaction_search('delivery', {location: 'San Francisco'})
 ```
 
 ### [Match Details API](https://www.yelp.com/developers/documentation/v3/business_match)
@@ -115,7 +117,7 @@ client.transaction_search({'delivery'}, {location: 'San Francisco'})
 To find all of the reviews for a business, use ``#match`` with a business ID. 
 
 ```ruby
-client.transaction_search({name: 'swissbakers', address1: '168 Western Ave', city: 'allston', state: 'MA', country: 'US'})
+client.match({name: 'swissbakers', address1: '168 Western Ave', city: 'allston', state: 'MA', country: 'US'})
 ```
 
 ## Responses
@@ -170,7 +172,8 @@ You can generate and find your Access Tokens at [https://www.yelp.com/developers
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT), Copyright (c) 2018 Jobcase, Inc
+
 
 ## Code of Conduct
 
