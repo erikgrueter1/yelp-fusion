@@ -24,7 +24,9 @@ require 'yelp/fusion/error'
 require 'yelp/fusion/endpoint/search'
 require 'yelp/fusion/endpoint/review'
 require 'yelp/fusion/endpoint/business'
-
+require 'yelp/fusion/endpoint/phone'
+require 'yelp/fusion/endpoint/match'
+require 'yelp/fusion/endpoint/transaction'
 
 module Yelp
   module Fusion
