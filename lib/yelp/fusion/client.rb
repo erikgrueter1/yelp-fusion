@@ -22,6 +22,9 @@ require 'faraday_middleware'
 require 'yelp/fusion/configuration'
 require 'yelp/fusion/error'
 require 'yelp/fusion/endpoint/search'
+require 'yelp/fusion/endpoint/review'
+require 'yelp/fusion/endpoint/business'
+
 
 module Yelp
   module Fusion
