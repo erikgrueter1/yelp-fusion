@@ -7,12 +7,11 @@ Gem::Specification.new do |spec|
   spec.name          = 'yelp-fusion'
   spec.version       = Yelp::Fusion::VERSION
   spec.authors       = ['Erik Grueter', 'Lyra Katzman']
-  spec.email         = ['erikgrueter@gmail.com', 'lkatzman@jobcase.com']
+  spec.email         = ['egrueter@jobcase.com', 'lkatzman@jobcase.com']
 
-  spec.summary       = '{A Ruby gem for the Yelp Fusion (V3) API and beyond}'
-  spec.description   = '{A Ruby gem for the Yelp Fucsion (v3) API.
-  It is built to support future versions}'
-  spec.homepage      = 'http://www.google.com'
+  spec.summary       = '{A Ruby gem for the Yelp Fusion (V3) API}'
+  spec.description   = '{A Ruby gem for the Yelp Fucsion (v3) API.}'
+  spec.homepage      = 'https://github.com/erikgrueter1/yelp-fusion'
   spec.license       = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org.
