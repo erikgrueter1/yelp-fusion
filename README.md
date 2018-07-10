@@ -4,7 +4,7 @@ This is a Ruby Gem for the Yelp API. It'll simplify the process of consuming dat
 
 This library is in Beta and should be used for testing purposes only.
 
-Please remember to read and follow the [Terms of Use](https://www.yelp.com/developers/api_terms) and [display requirements](https://www.yelp.com/developers/display_requirements)before creating your applications.
+Please remember to read and follow the [Terms of Use](https://www.yelp.com/developers/api_terms) and [display requirements](https://www.yelp.com/developers/display_requirements) before creating your applications.
 
 
 ## Installation
