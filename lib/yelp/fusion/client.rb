@@ -1,4 +1,4 @@
-# Copyright (c) Jobcase, Inc. All rights reserved. 
+# Copyright (c) Jobcase, Inc. All rights reserved.
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -27,10 +27,12 @@ require 'yelp/fusion/endpoint/business'
 require 'yelp/fusion/endpoint/phone'
 require 'yelp/fusion/endpoint/match'
 require 'yelp/fusion/endpoint/transaction'
+require 'yelp/fusion/singleton'
 
 module Yelp
   module Fusion
     class Client
+      include Fusion::Singleton
       API_HOST = 'https://api.yelp.com'.freeze
 
       attr_accessor :configuration
@@ -38,8 +40,10 @@ module Yelp
       # Creates an instance of the fusion client
       # @param options [String, nil] a consumer key
       # @return [Client] a new client initialized with the keys
+
       def initialize(option = nil)
         @configuration = nil
+        define_request_methods
         return if option.nil?
         @configuration = Configuration.new(option)
       end
