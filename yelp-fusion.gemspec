@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['egrueter@jobcase.com', 'lkatzman@jobcase.com']
 
   spec.summary       = '{A Ruby gem for the Yelp Fusion (V3) API}'
-  spec.description   = '{A Ruby gem for the Yelp Fucsion (v3) API.}'
+  spec.description   = '{A Ruby gem for the Yelp Fusion (v3) API.}'
   spec.homepage      = 'https://github.com/erikgrueter1/yelp-fusion'
   spec.license       = 'MIT'
 
