@@ -30,7 +30,7 @@ Or install it yourself as:
 The gem uses a client model to query against the API. You create and configure a client with your API keys and make requests through that.
 
 ```ruby
-require 'yelp-fusion'
+require 'yelp/fusion'
 
 client = Yelp::Fusion::Client.new(YOUR_API_KEY)
 ```
@@ -40,7 +40,7 @@ block, and access a client singleton using `Yelp::Fusion.client`.  If you intend
 use the gem with Rails, the client should be configured in an initializer.
 
 ```ruby
-require 'yelp-fusion'
+require 'yelp/fusion'
 
 configuration = Yelp.client.configure do |config|
   config.api_key = YOUR_API_KEY
