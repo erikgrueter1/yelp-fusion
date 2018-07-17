@@ -12,7 +12,7 @@ Please remember to read and follow the [Terms of Use](https://www.yelp.com/devel
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'yelp-fusion', require: 'yelp-fusion'
+gem 'yelp-fusion', '0.2.1-beta'
 ```
 
 And then execute:
