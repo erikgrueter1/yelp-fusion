@@ -9,11 +9,19 @@ Please remember to read and follow the [Terms of Use](https://www.yelp.com/devel
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line to your Rails application's Gemfile:
 
 ```ruby
 gem 'yelp-fusion', '0.2.1-beta'
 ```
+
+Add this line to your Ruby appliation's Gemfile:
+
+```ruby
+gem 'yelp-fusion', require: 'yelp/fusion'
+```
+
+
 
 And then execute:
 
@@ -98,7 +106,7 @@ client.phone_search('+15555555555')
 
 ### [Review Details API](https://www.yelp.com/developers/documentation/v3/business_reviews)
 
-To find all of the reviews for a business, use ``#review`` with a business ID. 
+To find all of the reviews for a business, use ``#review`` with a business ID.
 
 ```ruby
 client.review('lJAGnYzku5zSaLnQ_T6_GQ')
@@ -106,7 +114,7 @@ client.review('lJAGnYzku5zSaLnQ_T6_GQ')
 
 ### [Transaction Details API](https://www.yelp.com/developers/documentation/v3/transaction_search)
 
-To find all of the reviews for a business, use ``#transaction`` with ``'deliver'`` and a business ID. 
+To find all of the reviews for a business, use ``#transaction`` with ``'deliver'`` and a business ID.
 
 ```ruby
 client.transaction_search('delivery', {location: 'San Francisco'})
@@ -114,7 +122,7 @@ client.transaction_search('delivery', {location: 'San Francisco'})
 
 ### [Match Details API](https://www.yelp.com/developers/documentation/v3/business_match)
 
-To find all of the reviews for a business, use ``#match`` with a business ID. 
+To find all of the reviews for a business, use ``#match`` with a business ID.
 
 ```ruby
 client.match({name: 'swissbakers', address1: '168 Western Ave', city: 'allston', state: 'MA', country: 'US'})
