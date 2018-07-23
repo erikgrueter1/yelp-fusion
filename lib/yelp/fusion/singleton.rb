@@ -4,7 +4,7 @@ module Yelp
       # These methods were copied from the old yelp implementation
       # https://github.com/Yelp/yelp-ruby
 
-      REQUEST_CLASSES = [ Yelp::Fusion::Endpoint::Search,
+      REQUEST_CLASSES = [Yelp::Fusion::Endpoint::Search,
                         Yelp::Fusion::Endpoint::Business,
                         Yelp::Fusion::Endpoint::Phone]
         private
