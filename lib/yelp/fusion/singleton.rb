@@ -6,7 +6,10 @@ module Yelp
 
       REQUEST_CLASSES = [ Yelp::Fusion::Endpoint::Search,
                         Yelp::Fusion::Endpoint::Business,
-                        Yelp::Fusion::Endpoint::Phone]
+                        Yelp::Fusion::Endpoint::Phone,
+                        Yelp::Fusion::Endpoint::Review,
+                        Yelp::Fusion::Endpoint::Transaction,
+                        Yelp::Fusion::Endpoint::Match ]
         private
 
         # This goes through each endpoint class and creates singletone methods
@@ -19,7 +22,6 @@ module Yelp
           end
         end
 
-        # yelp
         # Loop through all of the endpoint instances' public singleton methods to
         # add the method to client
         def create_methods_from_instance(instance)
@@ -28,7 +30,6 @@ module Yelp
           end
         end
 
-        # yelp
         # Define the method on the client and send it to the endpoint instance
         # with the args passed in
         def add_method(instance, method_name)

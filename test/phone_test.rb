@@ -27,9 +27,8 @@ class PhoneTest < Minitest::Test
     api_key = 'api_placeholder'
     phone = '+14159083801'
     @client = Yelp::Fusion::Client.new(api_key)
-    @phone = Yelp::Fusion::Endpoint::Phone.new(@client)
     @results = VCR.use_cassette('phone') do
-      @phone.phone_search(phone)
+      @client.phone_search(phone)
     end
     @first = @results.businesses.first
   end

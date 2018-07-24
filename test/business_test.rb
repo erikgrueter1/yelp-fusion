@@ -26,9 +26,8 @@ class BusinessTest < Minitest::Test
   def setup
     api_key = 'api_placeholder'
     @client = Yelp::Fusion::Client.new(api_key)
-    @business = Yelp::Fusion::Endpoint::Business.new(@client)
     @results = VCR.use_cassette('business') do
-      @business.business('lJAGnYzku5zSaLnQ_T6_GQ', {})
+      @client.business('lJAGnYzku5zSaLnQ_T6_GQ', {})
     end
     @attributes = @results.business
   end

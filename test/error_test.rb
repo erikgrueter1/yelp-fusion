@@ -74,6 +74,16 @@ class ErrorTest < Minitest::Test
     end
   end
 
+  def test_business_not_found_failure
+    test_error = Struct.new(:status, :body)
+    result = test_error.new(400, '{"error": {"code": '\
+      '"BUSINESS_NOT_FOUND", "description": ' \
+      '"The requested business could not be found."}}')
+    assert_raises Yelp::Fusion::Error::BusinessNotFound do
+      Yelp::Fusion::Error.check_for_error(result)
+    end
+  end
+
   def test_token_missing_failure
     test_error = Struct.new(:status, :body)
     result = test_error.new(400, '{"error": {"code": '\

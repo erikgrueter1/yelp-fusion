@@ -26,9 +26,8 @@ class SearchTest < Minitest::Test
   def setup
     api_key = 'api_placeholder'
     @client = Yelp::Fusion::Client.new(api_key)
-    @search = Yelp::Fusion::Endpoint::Search.new(@client)
     @results = VCR.use_cassette('search') do
-      @search.search('San Francisco')
+      @client.search('San Francisco')
     end
     @first = @results.businesses.first
   end
@@ -63,7 +62,7 @@ class SearchTest < Minitest::Test
   def test_search_by_coordinates_returns_search_object
     coordinates = { latitude: 37.6, longitude: 38.6 }
     coord_results = VCR.use_cassette('search_by_coordinates') do
-      @search.search_by_coordinates(coordinates)
+      @client.search_by_coordinates(coordinates)
     end
     assert_kind_of Yelp::Fusion::Responses::Search, coord_results
   end

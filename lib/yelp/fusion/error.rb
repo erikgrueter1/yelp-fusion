@@ -100,6 +100,7 @@ module Yelp
       class AccessLimitReached < Base; end
       class NotFound < Base; end
       class ClientError < Base; end
+      class BusinessNotFound < Base; end
     end
   end
 end
