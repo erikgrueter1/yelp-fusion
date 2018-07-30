@@ -20,6 +20,6 @@
 
 module Yelp
   module Fusion
-    VERSION = '0.2-beta'.freeze
+    VERSION = '0.3-beta'.freeze
   end
 end
