@@ -13,6 +13,9 @@
 Gemspec/OrderedDependencies:
   Exclude:
 
+Gemspec/RequiredRubyVersion:
+  Enabled: No
+
 # Offense count: 1
 # Cop supports --auto-correct.
 Layout/CommentIndentation:

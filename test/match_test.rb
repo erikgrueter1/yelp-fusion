@@ -1,4 +1,4 @@
-# Copyright (c) Jobcase, Inc. All rights reserved. 
+# Copyright (c) Jobcase, Inc. All rights reserved.
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -29,9 +29,8 @@ class MatchTest < Minitest::Test
     params = { name: 'swissbakers', address1: '168 Western Ave',
                city: 'allston', state: 'MA', country: 'US' }
     @client = Yelp::Fusion::Client.new(api_key)
-    @match = Yelp::Fusion::Endpoint::Match.new(@client)
     @results = VCR.use_cassette('match') do
-      @match.match(params)
+      @client.match(params)
     end
     @attributes = @results.businesses.first
   end

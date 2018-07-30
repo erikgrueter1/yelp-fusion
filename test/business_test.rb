@@ -1,4 +1,4 @@
-# Copyright (c) Jobcase, Inc. All rights reserved. 
+# Copyright (c) Jobcase, Inc. All rights reserved.
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -26,9 +26,8 @@ class BusinessTest < Minitest::Test
   def setup
     api_key = 'api_placeholder'
     @client = Yelp::Fusion::Client.new(api_key)
-    @business = Yelp::Fusion::Endpoint::Business.new(@client)
     @results = VCR.use_cassette('business') do
-      @business.business('lJAGnYzku5zSaLnQ_T6_GQ', {})
+      @client.business('lJAGnYzku5zSaLnQ_T6_GQ', {})
     end
     @attributes = @results.business
   end

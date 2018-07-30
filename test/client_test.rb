@@ -1,4 +1,4 @@
-# Copyright (c) Jobcase, Inc. All rights reserved. 
+# Copyright (c) Jobcase, Inc. All rights reserved
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -88,5 +88,20 @@ class ClientTest < Minitest::Test
     assert_raises Yelp::Fusion::Error::MissingAPIKeys do
       @client.connection
     end
+  end
+
+  def test_if_responds_to_search_method
+    client = Yelp::Fusion::Client.new('api_key')
+    assert client.respond_to?(:search)
+  end
+
+  def test_if_responds_to_bussines_method
+    client = Yelp::Fusion::Client.new('api_key')
+    assert client.respond_to?(:business)
+  end
+
+  def test_if_responds_to_phone_search_method
+    client = Yelp::Fusion::Client.new('api_key')
+    assert client.respond_to?(:phone_search)
   end
 end

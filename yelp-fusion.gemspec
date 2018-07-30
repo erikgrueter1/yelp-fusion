@@ -19,7 +19,8 @@ Gem::Specification.new do |spec|
   # to allow pushing to a single host or
   # delete this section to allow pushing to any host.
   # if spec.respond_to?(:metadata)
-  #   spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
+  #   spec.metadata['allowed_push_host'] =
+  #   "TODO: Set to 'http://mygemserver.com'"
   # else
   #   raise 'RubyGems 2.0 or newer is required to protect against ' \
   #     'public gem pushes.'
@@ -34,9 +35,14 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 2.2.2'
 
   spec.add_development_dependency 'bundler', '~> 1.15'
+  spec.add_development_dependency 'faraday_middleware', '~> 0.12.2'
   spec.add_development_dependency 'pry', '~> 0.11.3'
   spec.add_development_dependency 'pry-coolline', '~> 0.2.5'
   spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'rubocop', '~> 0.58'
+  spec.add_development_dependency 'simplecov', '~> 0.16.0'
+  spec.add_development_dependency 'vcr', '~> 4.0'
+  spec.add_development_dependency 'webmock', '~> 3.4.2'
 
   spec.add_dependency 'faraday', '~> 0.15.2'
   spec.add_dependency 'faraday_middleware', '~> 0.12.2'

@@ -1,4 +1,4 @@
-# Copyright (c) Jobcase, Inc. All rights reserved. 
+# Copyright (c) Jobcase, Inc. All rights reserved.
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -28,9 +28,8 @@ class TransactionTest < Minitest::Test
     delivery = 'delivery'
     location = { location: 'San Francisco' }
     @client = Yelp::Fusion::Client.new(api_key)
-    @transaction = Yelp::Fusion::Endpoint::Transaction.new(@client)
     @results = VCR.use_cassette('transaction') do
-      @transaction.transaction_search(delivery, location)
+      @client.transaction_search(delivery, location)
     end
     @first = @results.businesses.first
   end
@@ -56,7 +55,7 @@ class TransactionTest < Minitest::Test
     delivery = 'delivery'
     coordinates = { latitude: 37.6, longitude: 38.6 }
     coord_results = VCR.use_cassette('transaction_by_coordinates') do
-      @transaction.transaction_by_coordinates(delivery, coordinates)
+      @client.transaction_by_coordinates(delivery, coordinates)
     end
     assert_kind_of Yelp::Fusion::Responses::Transaction, coord_results
   end
