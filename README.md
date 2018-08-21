@@ -66,18 +66,42 @@ Once you have a client you can use ``#search`` to make a request to the Search A
 client.search('San Francisco')
 ```
 
-You can also pass in general params and locale options to the method as hashes
+You can pass options to filter your search. `client.search` expects two
+arguments:
+
+* location
+* params
+
+The location arguments match the location option in search endpoint.[Seach API](https://www.yelp.com/developers/documentation/v3/business_search)
+This attribute is attached to options send to the serch endpoint.
+
+The params are convert to a hash and send to endpoint as verbatim options.
+
+* term: Search for term eg: 'food', 'restaurants', or the business name.
+* categories:  A list of comma limited categories to filter the business search
+* locale: Specify the locale to return the business information in.
+
+Form more info and the completed list of options, please go to [Search API](https://www.yelp.com/developers/documentation/v3/business_search)
+
+You can call search method using ruby arguments. The lisf or arguments will be
+parsed as hash for the second parameter.
 
 ```ruby
+# ruby arguments
+client.search('San Francisco', term: 'restaurants')
+```
+
+You can also pass a hash as second argument.
+
+```ruby
+# hash params
 params = { term: 'food',
            limit: 3,
            category_filter: 'discgolf'
          }
-
-locale = { lang: 'fr' }
-
-client.search('San Francisco', params, locale)
+client.search('San Francisco', params)
 ```
+
 Key names and options for params and locale match the documented names on the [Yelp Search API](https://www.yelp.com/developers/documentation/v3/business_search)
 
 Additionally there is one more search methods for searching by [geographical coordinates](https://www.yelp.com/developers/documentation/v3/business_search):
