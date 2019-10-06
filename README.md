@@ -50,7 +50,7 @@ use the gem with Rails, the client should be configured in an initializer.
 ```ruby
 require 'yelp/fusion'
 
-configuration = Yelp.client.configure do |config|
+configuration = Yelp::Fusion.client.configure do |config|
   config.api_key = YOUR_API_KEY
 end
 
