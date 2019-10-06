@@ -22,7 +22,7 @@ module Yelp
   module Fusion
     module Responses
       class Base
-        # yelp returns its data in JSON form/language
+        # yelp returns its data in JSON format.
         def initialize(json)
           return if json.nil?
           json.each do |key, value|

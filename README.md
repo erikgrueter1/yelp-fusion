@@ -22,7 +22,6 @@ gem 'yelp-fusion', require: 'yelp/fusion'
 ```
 
 
-
 And then execute:
 
     $ bundle
@@ -50,7 +49,7 @@ use the gem with Rails, the client should be configured in an initializer.
 ```ruby
 require 'yelp/fusion'
 
-configuration = Yelp.client.configure do |config|
+configuration = Yelp::Fusion.client.configure do |config|
   config.api_key = YOUR_API_KEY
 end
 
@@ -95,10 +94,12 @@ You can also pass a hash as second argument.
 
 ```ruby
 # hash params
-params = { term: 'food',
-           limit: 3,
-           category_filter: 'discgolf'
-         }
+params = {
+  term: 'food',
+  limit: 3,
+  category_filter: 'discgolf'
+}
+
 client.search('San Francisco', params)
 ```
 
@@ -205,7 +206,6 @@ You can generate and find your Access Tokens at [https://www.yelp.com/developers
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT), Copyright (c) 2018 Jobcase, Inc
-
 
 ## Code of Conduct
 

@@ -94,7 +94,7 @@ module Yelp
         # @param params [Hash] a hash of parameters for the search request
         # @return [Faraday::Response] the raw response back from the connection
         def search_request(params)
-          result = @client.connection.get PATH, params
+          result = @client.connection.get(PATH, params)
           Yelp::Fusion::Error.check_for_error(result)
           result
         end

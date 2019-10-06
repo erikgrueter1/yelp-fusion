@@ -61,7 +61,7 @@ module Yelp
         # @param phone [String] the phone number
         # @return [Faraday::Response] the raw response back from the connection
         def phone_request(phone)
-          result = @client.connection.get PATH, phone
+          result = @client.connection.get(PATH, phone)
           Error.check_for_error(result)
           result
         end

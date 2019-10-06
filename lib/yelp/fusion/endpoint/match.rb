@@ -54,7 +54,7 @@ module Yelp
         private
 
         def match_request(params = {})
-          result = @client.connection.get PATH, params
+          result = @client.connection.get(PATH, params)
           Error.check_for_error(result)
           result
         end

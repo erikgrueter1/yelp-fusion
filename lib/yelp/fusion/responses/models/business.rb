@@ -34,6 +34,7 @@ module Yelp
                       :name, :phone, :price,
                       :rating, :review_count, :url, :transactions,
                       :hours, :is_claimed, :photos
+
           def initialize(json)
             super(json)
             @categories = parse(@categories, Categories)
