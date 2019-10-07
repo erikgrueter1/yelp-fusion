@@ -23,9 +23,12 @@ require 'json'
 
 require 'yelp/fusion/responses/review'
 
+# Yelp::Fusion::Endpoint::Review
+#
 module Yelp
   module Fusion
     module Endpoint
+      # Class to search for business reviews
       class Review
         PATH = '/v3/businesses/'.freeze
 

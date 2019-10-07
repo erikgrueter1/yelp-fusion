@@ -21,9 +21,12 @@
 require 'yelp/fusion/responses/base'
 require 'yelp/fusion/responses/models/business'
 
+# Yelp::Fusion::Responses
+#
 module Yelp
   module Fusion
     module Responses
+      # Base class to parse json from the Business Match endpoint
       class Match < Base
         attr_reader :total, :businesses
         def initialize(json)

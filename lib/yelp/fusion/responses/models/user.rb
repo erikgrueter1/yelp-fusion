@@ -20,10 +20,13 @@
 
 require 'yelp/fusion/responses/base'
 
+# Yelp::Fusion::Responses::Models::Users
+#
 module Yelp
   module Fusion
     module Responses
       module Models
+        # Model for the User JSON body
         class User < Base
           attr_reader :image_url, :name
           def initialize(json)

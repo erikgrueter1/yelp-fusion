@@ -17,6 +17,7 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
+
 require 'faraday'
 require 'faraday_middleware'
 require 'yelp/fusion/configuration'
@@ -29,8 +30,11 @@ require 'yelp/fusion/endpoint/match'
 require 'yelp/fusion/endpoint/transaction'
 require 'yelp/fusion/singleton'
 
+# Yelp::Fusion::Client
+#
 module Yelp
   module Fusion
+    # Base class for the Yelp Client
     class Client
       include Fusion::Singleton
       API_HOST = 'https://api.yelp.com'.freeze
@@ -40,18 +44,21 @@ module Yelp
       # Creates an instance of the fusion client
       # @param options [String, nil] a consumer key
       # @return [Client] a new client initialized with the keys
-
+      #
       def initialize(option = nil)
         @configuration = nil
         define_request_methods
         return if option.nil?
+
         @configuration = Configuration.new(option)
       end
 
       # Creates a configuration with API keys
       # @return [@configuration] a frozen configuration
+      #
       def configure
         raise Error::AlreadyConfigured unless @configuration.nil?
+
         @configuration = Configuration.new
         yield(@configuration)
         check_api_keys
@@ -63,12 +70,12 @@ module Yelp
         if @configuration.nil? ||
            @configuration.api_key.nil? ||
            defined?(@configuration.api_key).nil?
+
           @configuration = nil
           raise Error::MissingAPIKeys
         else
           # Freeze the configuration so it cannot be modified once the gem is
-          # configured.  This prevents the configuration changing while the gem
-          # is operating, which would necessitate invalidating various caches
+          # configured.
           @configuration.freeze
         end
       end
@@ -79,7 +86,6 @@ module Yelp
 
         check_api_keys
         @connection = Faraday.new(API_HOST) do |conn|
-          # this guy uses oauth2 and bearer? maybe? to authorize the key
           conn.request :oauth2, @configuration.api_key, token_type: :bearer
           # Using default http library
           conn.adapter :net_http

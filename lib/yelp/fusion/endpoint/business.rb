@@ -23,9 +23,12 @@ require 'json'
 
 require 'yelp/fusion/responses/business'
 
+# Yelp::Fusion::Endpoint::Business
+#
 module Yelp
   module Fusion
     module Endpoint
+      # Endpoint to make client requests to the Businesses API
       class Business
         PATH = '/v3/businesses/'.freeze
 

@@ -21,10 +21,13 @@
 require 'yelp/fusion/responses/base'
 require 'yelp/fusion/responses/models/openHours'
 
+# Yelp::Fusion::Responses::Models::Hours
+#
 module Yelp
   module Fusion
     module Responses
       module Models
+        # Model for the Hours JSON body
         class Hours < Responses::Base
           attr_reader :is_open_now, :hours_type, :open
           def initialize(json)

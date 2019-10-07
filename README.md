@@ -12,7 +12,7 @@ Please remember to read and follow the [Terms of Use](https://www.yelp.com/devel
 Add this line to your Rails application's Gemfile:
 
 ```ruby
-gem 'yelp-fusion', '0.2.1-beta'
+gem 'yelp-fusion'
 ```
 
 Add this line to your Ruby appliation's Gemfile:
@@ -20,8 +20,6 @@ Add this line to your Ruby appliation's Gemfile:
 ```ruby
 gem 'yelp-fusion', require: 'yelp/fusion'
 ```
-
-
 
 And then execute:
 
@@ -95,10 +93,12 @@ You can also pass a hash as second argument.
 
 ```ruby
 # hash params
-params = { term: 'food',
-           limit: 3,
-           category_filter: 'discgolf'
-         }
+params = {
+  term: 'food',
+  limit: 3,
+  category_filter: 'discgolf'
+}
+
 client.search('San Francisco', params)
 ```
 
@@ -205,7 +205,6 @@ You can generate and find your Access Tokens at [https://www.yelp.com/developers
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT), Copyright (c) 2018 Jobcase, Inc
-
 
 ## Code of Conduct
 

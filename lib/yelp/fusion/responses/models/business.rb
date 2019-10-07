@@ -23,10 +23,13 @@ require 'yelp/fusion/responses/models/categories'
 require 'yelp/fusion/responses/models/location'
 require 'yelp/fusion/responses/models/hours'
 
+# Yelp::Fusion::Responses::Models::Business
+#
 module Yelp
   module Fusion
     module Responses
       module Models
+        # Model for the Yelp Business response JSON
         class Business < Responses::Base
           attr_reader :categories, :coordinates, :display_phone,
                       :distance, :id,
@@ -34,6 +37,7 @@ module Yelp
                       :name, :phone, :price,
                       :rating, :review_count, :url, :transactions,
                       :hours, :is_claimed, :photos
+
           def initialize(json)
             super(json)
             @categories = parse(@categories, Categories)

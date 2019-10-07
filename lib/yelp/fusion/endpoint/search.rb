@@ -21,9 +21,12 @@
 require 'json'
 require 'yelp/fusion/responses/search'
 
+# Yelp::Fusion::Endpoint::Search
+#
 module Yelp
   module Fusion
     module Endpoint
+      # Class to search for businesses
       class Search
         PATH = '/v3/businesses/search'.freeze
         def initialize(client)
@@ -81,6 +84,7 @@ module Yelp
         def search_by_coordinates(coordinates, params = {})
           raise Error::MissingLatLng if coordinates[:latitude].nil? ||
                                         coordinates[:longitude].nil?
+
           coordinates.merge!(params)
           Responses::Search.new(JSON.parse(search_request(coordinates).body))
         end
@@ -94,7 +98,7 @@ module Yelp
         # @param params [Hash] a hash of parameters for the search request
         # @return [Faraday::Response] the raw response back from the connection
         def search_request(params)
-          result = @client.connection.get PATH, params
+          result = @client.connection.get(PATH, params)
           Yelp::Fusion::Error.check_for_error(result)
           result
         end

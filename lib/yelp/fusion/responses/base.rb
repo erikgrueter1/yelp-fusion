@@ -18,13 +18,16 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+# Yelp::Fusion::Responses::Base
 module Yelp
   module Fusion
     module Responses
+      # Base instance variables sent back from JSON response
       class Base
-        # yelp returns its data in JSON form/language
+        # yelp returns its data in JSON format.
         def initialize(json)
           return if json.nil?
+
           json.each do |key, value|
             instance_variable_set("@#{key}", value)
           end
@@ -35,6 +38,7 @@ module Yelp
         def parse(json, klass)
           return json.collect { |j| klass.new(j) } if json.is_a?(Array)
           return klass.new(json) if json
+
           nil
         end
       end

@@ -23,9 +23,12 @@ require 'json'
 
 require 'yelp/fusion/responses/business'
 
+# Yelp::Fusion::Endpoint::Transaction
+#
 module Yelp
   module Fusion
     module Endpoint
+      # Endpoint to search for Yelp transactions
       class Transaction
         PATH = '/v3/transactions/'.freeze
 
@@ -33,11 +36,9 @@ module Yelp
           @client = client
         end
 
-        # Make a request to the business endpoint on the API
-        #
-        # @param id [String] the business id
-        # @param locale [Hash] a hash of supported locale-related parameters
-        # @return [Response::Review] the parsed response object from the API
+        # Make a request to the transaction search endpoint of the API
+        # @param transaction_type [String] it has to be delivery
+        # @param location [Hash] a hash of supported locatio
         #
         # @example Get Transaction
         #   review = client.transaction('delivery', 'San Francisco')
@@ -70,6 +71,7 @@ module Yelp
         def transaction_by_coordinates(transaction_type, coordinates)
           raise Error::MissingLatLng if coordinates[:latitude].nil? ||
                                         coordinates[:longitude].nil?
+
           result = transaction_request(transaction_type, coordinates)
           Responses::Transaction.new(JSON.parse(result.body))
         end

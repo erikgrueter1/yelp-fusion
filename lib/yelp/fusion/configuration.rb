@@ -18,8 +18,11 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+# Yelp::Fusion::Configuration
+#
 module Yelp
   module Fusion
+    # Store configuration values for api.
     class Configuration
       attr_accessor :api_key
 
@@ -30,6 +33,7 @@ module Yelp
       # config_api String
       def initialize(config_api = nil)
         return unless !config_api.nil? && config_api.is_a?(String)
+
         self.api_key = config_api
       end
     end

@@ -18,8 +18,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+# Yelp::Fusion::VERSION
+#
 module Yelp
   module Fusion
-    VERSION = '0.2-beta'.freeze
+    VERSION = '1.0'.freeze
   end
 end

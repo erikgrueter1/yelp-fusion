@@ -23,9 +23,12 @@ require 'json'
 
 require 'yelp/fusion/responses/phone'
 
+# Yelp::Fusion::Endpoint::Phone
+#
 module Yelp
   module Fusion
     module Endpoint
+      # Class to search businesses by phone
       class Phone
         PATH = '/v3/businesses/search/phone'.freeze
 
@@ -61,7 +64,7 @@ module Yelp
         # @param phone [String] the phone number
         # @return [Faraday::Response] the raw response back from the connection
         def phone_request(phone)
-          result = @client.connection.get PATH, phone
+          result = @client.connection.get(PATH, phone)
           Error.check_for_error(result)
           result
         end
