@@ -30,8 +30,11 @@ require 'yelp/fusion/endpoint/match'
 require 'yelp/fusion/endpoint/transaction'
 require 'yelp/fusion/singleton'
 
+# Yelp::Fusion::Client
+#
 module Yelp
   module Fusion
+    # Base class for the Yelp Client
     class Client
       include Fusion::Singleton
       API_HOST = 'https://api.yelp.com'.freeze
@@ -46,6 +49,7 @@ module Yelp
         @configuration = nil
         define_request_methods
         return if option.nil?
+
         @configuration = Configuration.new(option)
       end
 
@@ -54,6 +58,7 @@ module Yelp
       #
       def configure
         raise Error::AlreadyConfigured unless @configuration.nil?
+
         @configuration = Configuration.new
         yield(@configuration)
         check_api_keys
@@ -62,7 +67,10 @@ module Yelp
       # Checks that all the keys needed were given
       # @return [@configuration] a frozen configuration
       def check_api_keys
-        if @configuration.nil? || @configuration.api_key.nil? || defined?(@configuration.api_key).nil?
+        if @configuration.nil? ||
+           @configuration.api_key.nil? ||
+           defined?(@configuration.api_key).nil?
+
           @configuration = nil
           raise Error::MissingAPIKeys
         else

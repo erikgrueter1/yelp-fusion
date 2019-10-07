@@ -21,10 +21,13 @@
 require 'yelp/fusion/responses/base'
 require 'yelp/fusion/responses/models/center'
 
+# Yelp::Fusion::Responses::Models::Region
+#
 module Yelp
   module Fusion
     module Responses
       module Models
+        # Model for the Region JSON body
         class Region < Responses::Base
           attr_reader :center
           def initialize(json)

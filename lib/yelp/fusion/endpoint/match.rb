@@ -23,9 +23,12 @@ require 'json'
 
 require 'yelp/fusion/responses/business'
 
+# Yelp::Fusion::Endpoint::Match
+#
 module Yelp
   module Fusion
     module Endpoint
+      # Class for requests to find matching businesses
       class Match
         PATH = '/v3/businesses/matches'.freeze
 
@@ -33,7 +36,7 @@ module Yelp
           @client = client
         end
 
-        # Make a request to the business endpoint on the API
+        # Make a request to the business endpoint
         #
         # @param params [Hash] a hash of the required location parameters
         # @return [Response::Match] a parsed object of the response.

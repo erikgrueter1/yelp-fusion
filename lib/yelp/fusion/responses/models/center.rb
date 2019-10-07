@@ -18,10 +18,13 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+# Yelp::Fusion::Responses::Models::Center
+#
 module Yelp
   module Fusion
     module Responses
       module Models
+        # Model fot the Center json body
         class Center < Responses::Base
           attr_reader :latitude, :longitude
           def initialize(json)

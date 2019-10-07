@@ -21,9 +21,12 @@
 require 'yelp/fusion/responses/base'
 require 'yelp/fusion/responses/models/reviews'
 
+# Yelp::Fusion::Response::Review
+#
 module Yelp
   module Fusion
     module Responses
+      # Class to parse the Review response JSON
       class Review < Base
         attr_reader :reviews, :total, :possible_languages
         def initialize(json)

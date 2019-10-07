@@ -18,10 +18,13 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+# Yelp::Fusion::Responses::Models::Categories
+#
 module Yelp
   module Fusion
     module Responses
       module Models
+        # Model for the Categories JSON body
         class Categories < Responses::Base
           attr_reader :alias, :title
           def initialize(json)

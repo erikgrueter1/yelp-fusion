@@ -18,10 +18,13 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+# Yelp::Fusion::Responses::Models::Location
+#
 module Yelp
   module Fusion
     module Responses
       module Models
+        # Model for the Location JSON body
         class Location < Responses::Base
           attr_reader :city, :country, :address2, :address3,
                       :state, :address1, :zip_code,

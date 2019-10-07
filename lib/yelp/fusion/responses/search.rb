@@ -22,9 +22,12 @@ require 'yelp/fusion/responses/base'
 require 'yelp/fusion/responses/models/business'
 require 'yelp/fusion/responses/models/region'
 
+# Yelp::Fusion::Responses::Search
+#
 module Yelp
   module Fusion
     module Responses
+      # Class to parse the Search response JSON
       class Search < Base
         attr_reader :businesses, :region, :total
         def initialize(json)

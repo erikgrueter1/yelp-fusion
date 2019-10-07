@@ -21,7 +21,6 @@ Add this line to your Ruby appliation's Gemfile:
 gem 'yelp-fusion', require: 'yelp/fusion'
 ```
 
-
 And then execute:
 
     $ bundle

@@ -23,9 +23,12 @@ require 'json'
 
 require 'yelp/fusion/responses/phone'
 
+# Yelp::Fusion::Endpoint::Phone
+#
 module Yelp
   module Fusion
     module Endpoint
+      # Class to search businesses by phone
       class Phone
         PATH = '/v3/businesses/search/phone'.freeze
 

@@ -21,10 +21,13 @@
 require 'yelp/fusion/responses/base'
 require 'yelp/fusion/responses/models/user'
 
+# Yelp::Fusion::Responses::Models::Reviews
+#
 module Yelp
   module Fusion
     module Responses
       module Models
+        # Model for the Reviews JSON body
         class Reviews < Base
           attr_reader :id, :rating, :user, :text, :time_created, :url
           def initialize(json)

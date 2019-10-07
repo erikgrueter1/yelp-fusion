@@ -20,15 +20,19 @@
 
 require 'json'
 
+# Yelp::Fusion::Error::ResponseValidator
 module Yelp
   module Fusion
+    # Module to handle errors in Gem
     module Error
+      # Class to handle error responses
       class ResponseValidator
         # If the request is not successful, raise an appropriate Yelp::Error
         # exception with the error text from the request response.
         # @param response from the Yelp API
         def validate(response)
           return if successful_response?(response)
+
           raise error_from_response(response)
         end
 
@@ -64,12 +68,14 @@ module Yelp
         @response_validator.validate(response)
       end
 
+      # Standard error response class
       class Base < StandardError
         def initialize(msg, _error = nil)
           super(msg)
         end
       end
 
+      # Class to handle an already configure Yelp Client
       class AlreadyConfigured < Base
         def initialize(msg = 'Gem cannot be reconfigured.  Initialize a new ' \
           'instance of Yelp::Client.', error = nil)
@@ -77,12 +83,14 @@ module Yelp
         end
       end
 
+      # Class for missing Yelp API Keys
       class MissingAPIKeys < Base
         def initialize(msg = "You're missing an API key", error = nil)
           super
         end
       end
 
+      # Class for missing Latitude or longitude
       class MissingLatLng < Base
         def initialize(msg = 'Missing required latitude '\
           'or longitude parameters', error = nil)
@@ -90,16 +98,28 @@ module Yelp
         end
       end
 
+      # Class for invalid Auth Token
       class TokenInvalid < Base; end
+      # Class if no Yelp Location is found
       class LocationNotFound < Base; end
+      # Class if the rate limit is exceeded
       class TooManyRequestsPerSecond < Base; end
+      # Class if Yelp experiences a internal error
       class InternalError < Base; end
+      # Class if a Validation Error occurs
       class ValidationError < Base; end
+      # Class if an auth token is missing
       class TokenMissing < Base; end
+      # Class for timed out requests
       class RequestTimedOut < Base; end
+      # Class if the access limit for requests
+      # is reached
       class AccessLimitReached < Base; end
+      # Class for resources not found
       class NotFound < Base; end
+      # Class for client erro
       class ClientError < Base; end
+      # Class if businesses are not found
       class BusinessNotFound < Base; end
     end
   end

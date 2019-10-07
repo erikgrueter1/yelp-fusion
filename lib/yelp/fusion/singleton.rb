@@ -18,9 +18,12 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-# 
+# Yelp::Fusion::Singleton
+#
 module Yelp
   module Fusion
+    # Load each endpoint object once for acces by the
+    # Yelp::Fusion::Client object
     module Singleton
       REQUEST_CLASSES = [Yelp::Fusion::Endpoint::Search,
                          Yelp::Fusion::Endpoint::Business,

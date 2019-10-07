@@ -20,7 +20,10 @@
 
 require 'yelp/fusion/client'
 
+# Yelp::Fusion
+#
 module Yelp
+  # Entry module for application
   module Fusion
     # Returns an initially-unconfigured instance of the client.
     # @return [Client] an instance of the client

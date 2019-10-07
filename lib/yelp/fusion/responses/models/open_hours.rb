@@ -18,10 +18,13 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+# Yelp::Fusion::Responses::Models::OpenHours
+#
 module Yelp
   module Fusion
     module Responses
       module Models
+        # Model for the OpenHours JSON body
         class OpenHours < Responses::Base
           attr_reader :day, :start, :end, :is_overnight
           def initialize(json)
