@@ -19,7 +19,7 @@
 # THE SOFTWARE.
 
 require 'yelp/fusion/responses/base'
-require 'yelp/fusion/responses/models/openHours'
+require 'yelp/fusion/responses/models/open_hours'
 
 # Yelp::Fusion::Responses::Models::Hours
 #
